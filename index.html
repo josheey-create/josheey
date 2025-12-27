@@ -26,37 +26,56 @@
 
     @keyframes pulse {
       0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+      50% { opacity: 0.35; }
     }
   </style>
 </head>
 
 <body class="bg-black text-white">
 
-<!-- NAV -->
-<nav class="fixed top-0 w-full z-50 bg-black/70 backdrop-blur border-b border-zinc-800">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center gap-3 opacity-80">
-    <img src="logo-josheey.png" class="h-8">
-    <span class="tracking-[0.3em] text-sm">JOSHEEY</span>
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-zinc-800">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3 opacity-80">
+      <img src="logo-josheey.png" class="h-8">
+      <span class="tracking-[0.3em] text-sm">JOSHEEY</span>
+    </div>
+    <div class="hidden md:flex gap-8 text-sm tracking-widest text-zinc-400">
+      <span class="cursor-pointer hover:text-white">HOME</span>
+      <span class="cursor-pointer hover:text-white">COLLECTION</span>
+      <span class="cursor-pointer hover:text-white">ABOUT</span>
+    </div>
   </div>
 </nav>
 
-<!-- HOME -->
-<section id="home" style="display:flex" class="min-h-screen items-center justify-center pt-32">
-  <div class="flex flex-col md:flex-row gap-12 text-center md:text-left">
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+  <div class="fade-in">
+    <h1 class="text-6xl md:text-8xl font-black tracking-widest">
+      JOSHEEY
+    </h1>
+    <p class="mt-8 text-zinc-400 tracking-widest text-sm">
+      MODERN SPORTSWEAR · VISION · IDENTITY
+    </p>
+  </div>
+</section>
 
-    <button onclick="openComing('KURTKI')" class="text-4xl tracking-[0.4em] hover:opacity-60 transition">
-      KURTKI
-    </button>
+<!-- CATEGORIES -->
+<section id="home" class="py-32 border-t border-zinc-800">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl tracking-widest mb-20">COLLECTION</h2>
 
-    <button onclick="openComing('DRES')" class="text-4xl tracking-[0.4em] hover:opacity-60 transition">
-      DRES
-    </button>
-
-    <button onclick="openComing('BLUZY')" class="text-4xl tracking-[0.4em] hover:opacity-60 transition">
-      BLUZY
-    </button>
-
+    <div class="flex flex-col md:flex-row justify-center gap-16 text-4xl tracking-[0.4em]">
+      <button onclick="openComing('KURTKI')" class="hover:opacity-50 transition">
+        KURTKI
+      </button>
+      <button onclick="openComing('DRES')" class="hover:opacity-50 transition">
+        DRES
+      </button>
+      <button onclick="openComing('BLUZY')" class="hover:opacity-50 transition">
+        BLUZY
+      </button>
+    </div>
   </div>
 </section>
 
@@ -72,12 +91,10 @@
 
     <p class="mt-12 text-zinc-400 text-lg leading-relaxed">
       for more information text me<br><br>
-
       e-mail:
       <a href="mailto:josheeypl@gmail.com" class="text-white underline">
         josheeypl@gmail.com
       </a><br><br>
-
       instagram:
       <a href="https://instagram.com/josheey.pl" target="_blank" class="text-white underline">
         josheey.pl
@@ -92,6 +109,24 @@
   </div>
 </section>
 
+<!-- ABOUT -->
+<section class="py-32 border-t border-zinc-800">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl tracking-widest mb-12">ABOUT JOSHEEY</h2>
+    <p class="text-zinc-400 leading-relaxed text-lg">
+      JOSHEEY is a modern sportswear brand focused on identity, vision and minimalism.
+      We create clothing for people who move consciously — between sport, lifestyle and design.
+      <br><br>
+      This is not fast fashion. This is direction.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-zinc-800 py-12 text-center text-zinc-500 text-sm tracking-widest">
+  © 2025 JOSHEEY · ALL RIGHTS RESERVED
+</footer>
+
 <script>
   function openComing(category) {
     document.getElementById('home').style.display = 'none';
@@ -102,7 +137,7 @@
 
   function goBack() {
     document.getElementById('coming').style.display = 'none';
-    document.getElementById('home').style.display = 'flex';
+    document.getElementById('home').style.display = 'block';
     window.scrollTo(0, 0);
   }
 </script>
