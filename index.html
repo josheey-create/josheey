@@ -25,82 +25,46 @@
   </div>
 </nav>
 
-<!-- HOME -->
-<section id="home" class="min-h-screen flex items-center justify-center pt-32">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 max-w-7xl w-full">
+<!-- HERO -->
+<section class="relative h-screen flex items-center justify-center text-center">
+  <img src="hero.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40">
 
-    <div onclick="openCategory('kurtki.jpg')" class="cursor-pointer relative h-[420px] rounded-3xl overflow-hidden border border-zinc-800">
-      <img src="kurtki.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 hover:scale-105 transition duration-700">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <span class="relative z-10 flex h-full items-center justify-center text-3xl tracking-[0.4em]">KURTKI</span>
-    </div>
-
-    <div onclick="openCategory('dres.jpg')" class="cursor-pointer relative h-[420px] rounded-3xl overflow-hidden border border-zinc-800">
-      <img src="dres.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 hover:scale-105 transition duration-700">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <span class="relative z-10 flex h-full items-center justify-center text-3xl tracking-[0.4em]">DRES</span>
-    </div>
-
-    <div onclick="openCategory('bluzy.jpg')" class="cursor-pointer relative h-[420px] rounded-3xl overflow-hidden border border-zinc-800">
-      <img src="bluzy.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 hover:scale-105 transition duration-700">
-      <div class="absolute inset-0 bg-black/40"></div>
-      <span class="relative z-10 flex h-full items-center justify-center text-3xl tracking-[0.4em]">BLUZY</span>
-    </div>
-
+  <div class="relative z-10 px-6">
+    <h1 class="text-5xl md:text-7xl font-extrabold tracking-widest">
+      FUTURE OF<br>STREET & SPORT
+    </h1>
+    <p class="mt-8 text-zinc-300 max-w-xl mx-auto">
+      Progressive sportswear brand.
+    </p>
   </div>
 </section>
 
-<!-- COMING SOON VIEW -->
-<section id="coming" class="hidden min-h-screen flex items-center justify-center px-6">
-  <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<!-- KATEGORIE -->
+<section class="max-w-7xl mx-auto px-6 py-32 grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <img id="categoryImage" src="" class="w-full h-[500px] object-cover rounded-3xl border border-zinc-800">
+  <a href="kurtki.html" class="group relative h-[420px] rounded-3xl overflow-hidden border border-zinc-800">
+    <img src="kurtki.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <span class="relative z-10 flex h-full items-center justify-center text-3xl tracking-[0.4em]">KURTKI</span>
+  </a>
 
-    <div>
-      <h1 class="text-6xl md:text-7xl font-extrabold tracking-widest">
-        COMING<br>SOON
-      </h1>
+  <a href="dres.html" class="group relative h-[420px] rounded-3xl overflow-hidden border border-zinc-800">
+    <img src="dres.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <span class="relative z-10 flex h-full items-center justify-center text-3xl tracking-[0.4em]">DRES</span>
+  </a>
 
-      <p class="mt-10 text-zinc-400 text-lg leading-relaxed">
-        For more information text me:<br><br>
-        e-mail:
-        <a href="mailto:josheeypl@gmail.com" class="text-white underline">
-          josheeypl@gmail.com
-        </a><br>
-        instagram:
-        <a href="https://instagram.com/josheey.pl" target="_blank" class="text-white underline">
-          josheey.pl
-        </a>
-      </p>
+  <a href="bluzy.html" class="group relative h-[420px] rounded-3xl overflow-hidden border border-zinc-800">
+    <img src="bluzy.jpg" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <span class="relative z-10 flex h-full items-center justify-center text-3xl tracking-[0.4em]">BLUZY</span>
+  </a>
 
-      <button onclick="goBack()"
-        class="mt-14 px-10 py-3 border border-zinc-700 rounded-full tracking-widest text-sm hover:bg-white hover:text-black transition">
-        BACK
-      </button>
-    </div>
-
-  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="border-t border-zinc-800 py-10 text-center text-zinc-500 text-sm">
+<footer class="border-t border-zinc-800 py-16 text-center text-zinc-500 text-sm">
   © 2025 JOSHEEY
 </footer>
-
-<script>
-  function openCategory(image) {
-    document.getElementById('home').classList.add('hidden');
-    document.getElementById('coming').classList.remove('hidden');
-    document.getElementById('categoryImage').src = image;
-    window.scrollTo(0,0);
-  }
-
-  function goBack() {
-    document.getElementById('coming').classList.add('hidden');
-    document.getElementById('home').classList.remove('hidden');
-    window.scrollTo(0,0);
-  }
-</script>
 
 </body>
 </html>
